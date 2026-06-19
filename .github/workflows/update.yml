@@ -1,0 +1,31 @@
+name: Daily README Update
+
+on:
+  schedule:
+    - cron: '0 17 * * *'
+  workflow_dispatch: # Allows you to trigger it manually from the Actions tab
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+    - name: Make Bash script executable
+      run: chmod +x update_readme.sh
+
+    - name: Run Update Bash Script
+      run: ./update_readme.sh
