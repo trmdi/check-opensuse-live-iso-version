@@ -71,13 +71,13 @@ def get_packages_filtered(input_data):
         }
 
         if not table_id or not package_name:
-            output_item["version"] = "missing tableID or package fields"
+            output_item["error"] = "missing tableID or package fields"
             results_array.append(output_item)
             continue
 
         table = soup_overview.find('td', id=table_id)
         if not table:
-            output_item["version"] = f"table {table_id} not found"
+            output_item["error"] = f"table {table_id} not found"
             results_array.append(output_item)
             continue
 
@@ -86,7 +86,7 @@ def get_packages_filtered(input_data):
         test_link = urljoin(base_url, a_tag.get('href')) if a_tag else None
 
         if not test_link:
-            output_item["version"] = "matching live x86_64 test row link not found"
+            output_item["error"] = "test result link not found"
             results_array.append(output_item)
             continue
 
@@ -103,7 +103,7 @@ def get_packages_filtered(input_data):
 
         file_text = file_contents_cache[info_file_url]
         if file_text is None:
-            output_item["version"] = "failed to fetch log file"
+            output_item["error"] = "failed to fetch log file"
             results_array.append(output_item)
             continue
 
@@ -117,7 +117,7 @@ def get_packages_filtered(input_data):
             version = re.sub(r'\.(x86_64|noarch|i586|aarch64|ppc64le|s390x)$', '', remainder)
             output_item["version"] = version
         else:
-            output_item["version"] = "not found"
+            output_item["error"] = f"version not found for package {package_name}"
 
         results_array.append(output_item)
 

@@ -4,7 +4,7 @@
 set -e
 
 # 1. Get the latest snapshot
-python3 run.py > output.json
+python3 run.py | tee output.json
 
 # 2. Initialize the README file with a clean header and Markdown Table structure
 cat << 'EOF' > README.md
@@ -17,7 +17,7 @@ Automated daily builds tracker for openSUSE Live images.
 EOF
 
 # 3. Loop through each item in the JSON array using jq
-jq -c '.[]' output.json | while read -r item; do
+jq -c '.[] | select(.error == null)' output.json | while read -r item; do
     # Extract fields from the current JSON object
     FLAVOR=$(echo "$item" | jq -r '.flavor')
     VERSION=$(echo "$item" | jq -r '.version')
@@ -40,7 +40,7 @@ fi
 
 # 6. Check for changes
 if git diff --quiet README.md; then
-  echo "No version changes detected across flavors. Exiting."
+  echo "No version changes detected in README.md. Exiting."
   exit 0
 fi
 
