@@ -7,7 +7,7 @@ import gzip
 import re
 import os
 
-INDEX_URL = "https://download.opensuse.org/tumbleweed/repo/oss/INDEX.gz"
+INDEX_URL = "https://download.opensuse.org/tumbleweed/repo/oss/INDEX.gz?COUNTRY=DE"
 
 DEFAULT_INPUT = [
     {"package": "plasma6-desktop", "display": "Plasma"},
