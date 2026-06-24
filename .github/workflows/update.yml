@@ -24,8 +24,5 @@ jobs:
       run: |
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-    - name: Make Bash script executable
-      run: chmod +x update_readme.sh
-
     - name: Run Update Bash Script
-      run: ./update_readme.sh
+      run: bash ./update_readme2.sh
