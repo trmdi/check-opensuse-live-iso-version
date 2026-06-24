@@ -1,9 +1,19 @@
-# openSUSE Live ISO
+# openSUSE Tumbleweed Installation / Live ISO
 
-Automated daily builds tracker for openSUSE Live images.
+#### Download Links:
+* **KDE Live:** [Download ISO](https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-KDE-Live-x86_64-Current.iso?mirrorlist)
+* **GNOME Live:** [Download ISO](https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-GNOME-Live-x86_64-Current.iso?mirrorlist)
+* **XFCE Live:** [Download ISO](https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-XFCE-Live-x86_64-Current.iso?mirrorlist)
 
-| Flavor | Version | Build ID | Download Link |
-| :--- | :--- | :--- | :--- |
-| **KDE LiveCD x86_64** | `6.7.0-1.1` | `20260622` | [Download Image](https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-KDE-Live-x86_64-Current.iso?mirrorlist) |
-| **GNOME LiveCD x86_64** | `50.2-1.1` | `20260622` | [Download Image](https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-GNOME-Live-x86_64-Current.iso?mirrorlist) |
-| **Xfce LiveCD x86_64** | `4.20.4-1.2` | `20260622` | [Download Image](https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-XFCE-Live-x86_64-Current.iso?mirrorlist) |
+---
+
+### Current package version
+
+| Component | Version |
+| :--- | :--- |
+| **Plasma** | 6.7.0-1.1 |
+| **KDE Framework** | 6.27.0-1.1 |
+| **Qt** | 6.11.1-1.1 |
+| **Kernel** | 7.0.12-1.1 |
+| **GNOME** | 50.2-1.1 |
+| **XFCE** | 4.20.4-1.2 |
