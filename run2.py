@@ -16,6 +16,7 @@ DEFAULT_INPUT = [
     {"package": "kernel-default", "display": "Kernel"},
     {"package": "gnome-shell", "display": "GNOME"},
     {"package": "xfce4-session", "display": "XFCE"},
+    {"package": "openSUSE-release", "display": ""},
 ]
 
 def main(input_data=None):

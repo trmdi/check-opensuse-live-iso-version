@@ -12,6 +12,11 @@ if [ $? -ne 0 ] || [ -z "$JSON_DATA" ]; then
     exit 1
 fi
 
+OPENSUSE_RELEASE=$(echo "$JSON_DATA" | jq -r '.[] | select(.package == "openSUSE-release") | .version' | cut -d "-" -f 1)
+
+JSON_DATA=$(echo "$JSON_DATA" | jq 'del(.[] | select(.package == "openSUSE-release"))')
+
+
 # Start writing the README.md with the requested header formatting
 cat << EOF > "$OUTPUT_FILE"
 # openSUSE Tumbleweed Installation / Live ISO
@@ -23,7 +28,7 @@ cat << EOF > "$OUTPUT_FILE"
 
 ---
 
-### Current package version
+### Current release $OPENSUSE_RELEASE:
 
 | Component | Version |
 | :--- | :--- |
