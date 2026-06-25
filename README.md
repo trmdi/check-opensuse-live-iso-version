@@ -7,7 +7,7 @@
 
 ---
 
-### Current package version
+### Current release 20260623:
 
 | Component | Version |
 | :--- | :--- |
