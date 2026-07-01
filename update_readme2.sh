@@ -25,6 +25,7 @@ cat << EOF > "$OUTPUT_FILE"
 * **KDE Live:** [Download ISO](https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-KDE-Live-x86_64-Current.iso?mirrorlist)
 * **GNOME Live:** [Download ISO](https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-GNOME-Live-x86_64-Current.iso?mirrorlist)
 * **XFCE Live:** [Download ISO](https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-XFCE-Live-x86_64-Current.iso?mirrorlist)
+* **Offline Image:** [Download ISO](https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-DVD-x86_64-Current.iso?mirrorlist)
 
 ---
 
