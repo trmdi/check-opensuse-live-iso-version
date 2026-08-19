@@ -8,7 +8,7 @@
 
 ---
 
-### Current release 20260817:
+### Current release 20260818:
 
 | Component | Version |
 | :--- | :--- |
