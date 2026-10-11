@@ -8,7 +8,7 @@
 
 ---
 
-### Current release 20261009:
+### Current release 20261010:
 
 | Component | Version |
 | :--- | :--- |
@@ -16,5 +16,5 @@
 | **KDE Framework** | 6.30.0-1.1 |
 | **Qt** | 6.11.2-2.1 |
 | **Kernel** | 7.2.9-1.1 |
-| **GNOME** | 50.5-1.1 |
+| **GNOME** | 50.5-2.1 |
 | **XFCE** | 4.20.4-1.4 |
