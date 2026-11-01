@@ -8,13 +8,13 @@
 
 ---
 
-### Current release 20261028:
+### Current release 20261030:
 
 | Component | Version |
 | :--- | :--- |
-| **Plasma** | 6.8.1-1.1 |
+| **Plasma** | 6.8.2-1.1 |
 | **KDE Framework** | 6.31.0-1.2 |
 | **Qt** | 6.12.0-1.1 |
 | **Kernel** | 7.3.0-1.1 |
-| **GNOME** | 50.5-2.1 |
+| **GNOME** | 51.1-1.1 |
 | **XFCE** | 4.20.4-1.4 |
